@@ -37,3 +37,5 @@
 .\objects\main.o: .\Hardware\Buzzer.h
 .\objects\main.o: .\Hardware\Serial.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: .\Hardware\ds18b20.h
+.\objects\main.o: .\Hardware\AD.h

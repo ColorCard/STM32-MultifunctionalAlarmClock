@@ -1,7 +1,7 @@
 #include "stm32f10x.h"                  // Device header
 #include <time.h>
 
-uint16_t MyRTC_Time[] = {2024, 10, 26, 23, 59, 55};	//定义全局的时间数组，数组内容分别为年、月、日、时、分、秒
+uint16_t MyRTC_Time[] = {2024, 10, 26, 23, 59, 55,6};	//定义全局的时间数组，数组内容分别为年、月、日、时、分、秒
 
 void MyRTC_SetTime(void);				//函数声明
 
@@ -134,4 +134,5 @@ void MyRTC_ReadTime(void)
 	MyRTC_Time[3] = time_date.tm_hour;
 	MyRTC_Time[4] = time_date.tm_min;
 	MyRTC_Time[5] = time_date.tm_sec;
+    MyRTC_Time[6] = (time_date.tm_wday == 0) ? 7 : time_date.tm_wday;
 }

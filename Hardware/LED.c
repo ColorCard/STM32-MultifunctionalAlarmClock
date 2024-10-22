@@ -3,6 +3,7 @@
 #include "Buzzer.h"
 
 extern uint8_t Alarm_Flag;  // 引入全局变量 Alarm_Flag，用于控制闹钟报警
+extern uint8_t TempAlarm_Flag;
 
 void LED_Turn(void);
 void LED_OFF(void);
@@ -40,7 +41,7 @@ void TIM3_IRQHandler(void) {
     if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET) {  // 检查更新中断
         TIM_ClearITPendingBit(TIM3, TIM_IT_Update);       // 清除中断标志
 
-        if (Alarm_Flag == 1) {
+        if (Alarm_Flag || TempAlarm_Flag == 1) {
             LED_Turn(); // LED闪烁表示报警
             Buzzer_Turn();
         } else {
