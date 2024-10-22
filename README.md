@@ -4,10 +4,10 @@ STM32f103RCT6 的多功能数字钟
 <br>
 ---
 ### 本项目基本功能：
-1. 时钟的基准用 STM32F103RCT6 自带的 RTC 实现。<br>[MyRTC.c](System%2FMyRTC.c)
+1. **时钟的基准用 STM32F103RCT6 自带的 RTC 实现。**<br>[MyRTC.c](System%2FMyRTC.c)
 
 
-2. 实现了按钮设置功能。 <br>采用矩阵键盘设计，三个按键的功能分别为：`设置`、`加`、`减`（`WAKEUP`、`KEY0`、`KEY1`)。 <br>设定时间、日期、星期时，按下设定键，相应的参数会闪动，即一亮一灭，提示正的修改的数据，每按一下设置键，设定的项目就会变化，顺序为：`秒` `分` `时` `日` `月` `年` `闹铃分` `闹铃时` `报警温度`，（显示屏选择使用0.96寸OLED）。<br>顺序设定完后，再按一下设定键，就退出设定状态，回到正显示状态。<br>[Key.c](Hardware%2FKey.c)<br>[Blink_Display.c](Hardware%2FBlink_Display.c) 
+2. **实现了按钮设置功能。** <br>采用矩阵键盘设计，三个按键的功能分别为：`设置`、`加`、`减`（`WAKEUP`、`KEY0`、`KEY1`)。 <br>设定时间、日期、星期时，按下设定键，相应的参数会闪动，即一亮一灭，提示正的修改的数据，每按一下设置键，设定的项目就会变化，顺序为：`秒` `分` `时` `日` `月` `年` `闹铃分` `闹铃时` `报警温度`，（显示屏选择使用0.96寸OLED）。<br>顺序设定完后，再按一下设定键，就退出设定状态，回到正显示状态。<br>[Key.c](Hardware%2FKey.c)<br>[Blink_Display.c](Hardware%2FBlink_Display.c) 
 
 
 
@@ -20,7 +20,7 @@ STM32f103RCT6 的多功能数字钟
 5. **闹铃功能、温度报警功能。**<br>时间到/温度超过设置值，蜂鸣器发生“嘀嘀”声，LED会进行闪烁。<br>[Buzzer.c](Hardware%2FBuzzer.c)<br>[LED.c](Hardware%2FLED.c)<br>[Timer.c](Hardware%2FTimer.c)
 
 
-6. 通过ADC采集电池电压，并且能够在 OLED 上实时显示当前电池电压大小（使用了电阻分压）。<br>[AD.c](Hardware%2FAD.c)
+6. **电压显示功能。**<br>通过ADC采集电池电压，并且能够在 OLED 上实时显示当前电池电压大小（使用了电阻分压）。<br>[AD.c](Hardware%2FAD.c)
 
 
 
