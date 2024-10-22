@@ -1,9 +1,10 @@
 ## STM32f103RCT6 的多功能数字钟
 
 
-本人做的一个小项目，有帮助的话留下一个 **Star ⭐**️ 吧 🥳
-<br>
+##### 本项目遵守 [MIT License](LICENSE) 开源协议，有帮助的话留下一个 **Star ⭐**️ 吧 🥳
+
 ---
+
 ### 本项目基本功能：
 1. **时钟的基准用 STM32F103RCT6 自带的 RTC 实现。**<br>[MyRTC.c](System%2FMyRTC.c)
 
